@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  min-width: 150px;
+  min-height: 150px;
+  border: 1px solid gray;
+  margin: 8px 8px 0 0;
+  cursor: pointer;
+  background-size: cover;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0);
+  transition: transform 0.4s ease;
+}
+
+.card.flipped {
+  transform: perspective(1000px) rotateY(360deg);
+}
+
+#board {
+  width: 750px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+
+#controlPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#startGame {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#scoreOutput {
+  font-weight: bold;
+}
+
+#startGame:hover {
+  background-color: rgb(152, 6, 152);
+}
+
+#startGame:active {
+  background-color: #7b0d6e;
+}
